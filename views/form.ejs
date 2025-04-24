@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+    </style>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
+    </style>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+    </style>
+
+    <link rel="stylesheet" href="/new-form.css" />
+  </head>
+  <body>
+
+    <form action="/" id="all-messages"><button>All Messages</button></form>
+    <form action="/new" method="post">
+      <h1>New Message</h1>
+      <section id="name-input">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required />
+      </section>
+      <section id="textarea-field">
+        <label for="message">Write your message:</label>
+        <textarea
+          name="message"
+          id="message"
+          cols="30"
+          rows="5"
+          maxlength="150"
+          required
+        ></textarea>
+      </section>
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

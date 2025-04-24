@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <!-- Fonts -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+    </style>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+    </style>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap");
+    </style>
+
+    <link rel="stylesheet" href="/homepage-styles.css" />
+  </head>
+  <body>
+    <form action="/new"><button type="submit">New Message</button></form>
+    <% for(let i = 0; i < messages.length; i++) { %>
+    <div class="user-card">
+      <a
+        href="/message/<%= messages[i].id %>"
+        target="_blank"
+        rel="noopener noreferrer"
+        ><h1>Username: <%= messages[i].user %></h1>
+        <h3>Message: <%= messages[i].text %></h3>
+        <br />
+        <h4>Date Added: <%= messages[i].added %></h4>
+        <br />
+      </a>
+    </div>
+    <% } %>
+  </body>
+</html>

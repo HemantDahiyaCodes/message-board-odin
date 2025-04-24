@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= message.text %></title>
+
+    <!-- fonts -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+    </style>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+    </style>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap");
+    </style>
+    <link rel="stylesheet" href="/homepage-styles.css" />
+  </head>
+  <body>
+
+    <form action="/" id="all-messages"><button>All Messages</button></form>
+    <div class="user-id">
+      <h1>Username: <%= message.user %></h1>
+      <h3>Message: <%= message.text %></h3>
+      <br />
+      <h4>Date Added: <%= message.added %></h4>
+      <br />
+    </div>
+  </body>
+</html>

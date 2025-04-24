@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: whitesmoke;
+  flex-wrap: wrap;
+}
+
+.user-card {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid black;
+  border-top-right-radius: 20px;
+  box-shadow: 14px 14px 34px 0px rgba(0,0,0,0.33);
+  z-index: 0;
+}
+
+
+.user-card:hover {
+    animation: ease-in-out 1s 1 user-card-animation forwards;
+}
+
+
+@keyframes user-card-animation {
+    0% {
+        transform: scale(1);
+        background-color: white;
+    }
+
+    100% {
+        transform: scale(1.1);
+        transition: 0.3s;
+        z-index: 1;
+        background-color: lightgreen;
+    }
+}
+
+h1 {
+  font-family: "roboto";
+}
+
+h3 {
+  font-family: "consolas";
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-family: "Montserrat";
+  font-weight: 400;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+
+button {
+  padding: 2rem;
+  width: 100%;
+  font-size: 2rem;
+  font-family: "Winky Rough";
+  background-color: #b08480;
+  color: white;
+}
+
+button:hover {
+  font-weight: 500;
+  background-color: blue;
+  color: white;
+  transition: 0.3s;
+}
+
+#message-data {
+  border: 1px solid black;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+
+.user-card a {
+  text-decoration: none;
+  text-align: center;
+  color: black;
+}
