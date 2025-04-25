@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const path = require("node:path");
 const assestsPath = path.join(__dirname, "public");
-
+const PORT = process.env.PORT || 8000;
 app.use(express.static(assestsPath));
 
 let id = 1;
@@ -45,10 +45,10 @@ app.post("/new", (req, res) => {
 
 app.get("/message/:id", (req, res) => {
   const id = parseInt(req.params.id);
-  const message = messages.find(message => message.id === id);
-  res.render("message", {message: message})
-})
+  const message = messages.find((message) => message.id === id);
+  res.render("message", { message: message });
+});
 
-app.listen(3000, () => {
-  console.log("Server started!");
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Server running on port ${PORT}`);
 });
